@@ -13,7 +13,9 @@ class inputText extends Component {
   translate(event) {
     event.preventDefault();
     let textToTranslate = this.refs.textToTranslate.value;
+    console.log('input: ', textToTranslate);
     let language = this.refs.language.value;
+    console.log('translate: ', language);
     this.props.translate(textToTranslate, language);
   }
   render() {

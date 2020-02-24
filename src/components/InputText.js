@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../styles/css/input.css';
 
 class inputText extends Component {
   constructor(props) {
@@ -18,21 +19,22 @@ class inputText extends Component {
   render() {
     return (
       <div>
-        <form className='form-inline' onSubmit={this.translate}>
+        <form className='Form' onSubmit={this.translate}>
           <input
             type='text'
             placeholder='Enter a Text'
-            className='form-control'
+            className='formInput'
             ref='textToTranslate'
           />
-          <select className='form-control' ref='language'>
+          <select className='formSelect' ref='language'>
             <option value='en'>English</option>
             <option value='ru'>Russian</option>
             <option value='es'>Spanish</option>
             <option value='fr'>French</option>
             <option value='zh'>Chineese</option>
+            <option value='it'>Italian</option>
           </select>
-          <input type='submit' className='btn btn-primary' value='Translate' />
+          <input type='submit' className='button' value='Translate' />
         </form>
       </div>
     );

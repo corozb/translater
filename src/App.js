@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import InputText from './components/InputText';
 import OutputText from './components/OutputText';
-// import './'
+import './styles/css/container.css';
 
 const key =
   'trnsl.1.1.20200205T233005Z.5e79d21d43eacfa9.ecbd7346e852b59ea0cda1c23c191dd957b75ae4';
@@ -34,7 +34,7 @@ class App extends Component {
   render() {
     return (
       <div className='container'>
-        <h2 className='container__title'>Word Translator</h2>
+        <h2 className='container__title'>Mini Translator</h2>
         <InputText translate={this.translate} />
         <OutputText output={this.state.output} />
       </div>
